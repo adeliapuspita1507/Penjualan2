@@ -4,9 +4,10 @@ $user = "root";
 $pass = "";
 $db   = "db_casir"; 
 
-$conn = mysqli_connect($host, $user, $pass, $db);
+$conn = mysqli_connect("localhost", "root", "", "db_casir");
 
 if (!$conn) {
-    die("Koneksi database gagal: " . mysqli_connect_error());
+    die("Koneksi gagal: " . mysqli_connect_error());
 }
+
 ?>

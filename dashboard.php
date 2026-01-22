@@ -103,7 +103,7 @@ session_start();
     <div class="sidebar">
         <h2>Dashboard</h2>
         <a href="#">Home</a>
-        <a href="#">List Produk</a>
+        <a href="dashboard.php?page=produk">List Produk</a>
          <a href="#">Customer</a>
         <a href="#">Transaksi</a>
         <a href="#">Laporan</a>
@@ -119,11 +119,14 @@ session_start();
     </div>
     <div class="content">
         <?php
-        $page = $_GET['page'] ?? 'home';
-        $file = "pages/$page.php";
-        if (file_exists($file)) {
-            include $file;
-        } else {
+        $page = $_GET['page'];
+
+if ($page == 'produk') {
+    include 'pages/produk.php';
+}
+
+       
+        else {
             echo "<h2>Welcome Dashboard</h2>";
         }
         ?>
