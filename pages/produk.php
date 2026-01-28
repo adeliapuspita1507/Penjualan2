@@ -1,5 +1,5 @@
 <?php
-include __DIR__ . '/../koneksi.php';
+include __DIR__ .'koneksi.php';
 $data = mysqli_query($conn, "SELECT * FROM barang");
 
 if (!$data) {
